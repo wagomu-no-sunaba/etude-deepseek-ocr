@@ -1,0 +1,32 @@
+[project]
+name = "deepseek-ocr-mac"
+version = "0.1.0"
+description = "DeepSeek-OCR environment for macOS (Apple Silicon, M4 Pro)"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "torch==2.6.0",
+    "torchvision==0.21.0",
+    "torchaudio==2.6.0",
+    "transformers==4.46.3",
+    "einops",
+    "addict",
+    "easydict",
+    "pillow",
+    "numpy",
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.uv]
+package = false
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "black",
+    "mypy",
+]
+
